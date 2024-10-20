@@ -26,6 +26,8 @@ npm i express mysql nodemon
 npm start
 npx create-react-app .
 npm i react-router-dom
+npm i axios
+npm i cors
 
 ## Colaboradores
 
