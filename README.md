@@ -13,20 +13,14 @@
 
 ## Descrição do projeto
 
-Notepad do windows utilizando tecnologias ageis.
 
 ## Tecnologias
 
 <div width="140px">
-    <img src="https://skillicons.dev/icons?i=javascript,electron,html,css,vscode" />
+    <img src="https://skillicons.dev/icons?i=react,mysql,nodejs,vscode" />
 </div>
 
 ## Como utilizar o projeto
-
-**1.** Precisamos abrir o projeto no nosso VsCode.<br>
-**2.** Instalar o npm no terminal com o comando `npm install`.<br>
-**3.** Rode o `npm install electron --save-dev` no terminal da IDE.<br>
-**4.** Rode `npx electronmon .` no terminal para abrir o notepad.<br>
 
 ## Colaboradores
 
