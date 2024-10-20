@@ -23,6 +23,8 @@
 ## Como utilizar o projeto
 
 npm i express mysql nodemon
+npm start
+npx create-react-app .
 
 ## Colaboradores
 
