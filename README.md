@@ -17,10 +17,12 @@
 ## Tecnologias
 
 <div width="140px">
-    <img src="https://skillicons.dev/icons?i=react,mysql,nodejs,vscode" />
+    <img src="https://skillicons.dev/icons?i=react,mysql,nodejs,javascript,vscode" />
 </div>
 
 ## Como utilizar o projeto
+
+npm i express mysql nodemon
 
 ## Colaboradores
 
