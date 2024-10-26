@@ -1,4 +1,4 @@
-<h1 align="center"></h1>
+<h1 align="center">CRUD - Livraria</h1>
 
 <p align="center">
 <img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20ANDAMENTO&color=0065fd&style=for-the-badge"/>
@@ -21,18 +21,16 @@
 Nesse projeto de livraria, o **CRUD** é implementado para gerenciar o catálogo de livros, permitindo as seguintes operações:
 
 ### 1. Create
-Permite adicionar novos livros ao banco de dados. O usuário pode preencher informações, como **título**, **descrição**, **preço** e **capa**, para incluir um novo livro na biblioteca.
+> Permite adicionar novos livros ao banco de dados. O usuário pode preencher informações, como **título**, **descrição**, **preço** e **capa**, para incluir um novo livro na biblioteca.
 
 ### 2. Read
-Exibe a lista de livros existentes. O usuário pode visualizar todos os livros armazenados, incluindo detalhes como **título**, **descrição**, **capa** e **preço**.
+> Exibe a lista de livros existentes. O usuário pode visualizar todos os livros armazenados, incluindo detalhes como **título**, **descrição**, **capa** e **preço**.
 
 ### 3. Update
-Oferece a possibilidade de editar informações de um livro específico. Isso permite corrigir ou atualizar dados, como o **título** ou a **descrição**.
+> Oferece a possibilidade de editar informações de um livro específico. Isso permite corrigir ou atualizar dados, como o **título** ou a **descrição**.
 
 ### 4. Delete
-Remove livros do banco de dados. O usuário pode excluir registros de livros que não são mais necessários.
-
----
+> Remove livros do banco de dados. O usuário pode excluir registros de livros que não são mais necessários.
 
 Essas operações juntas permitem que o sistema de livros funcione como uma interface completa de gerenciamento de dados, sendo o CRUD essencial para a interação e manutenção dos registros dos livros no projeto.
 
