@@ -9,6 +9,7 @@
 
 .books {
     display: flex;
+    gap: 10px;
 }
 
 .book {
