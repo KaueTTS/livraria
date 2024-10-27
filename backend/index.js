@@ -26,6 +26,11 @@ app.get("/books", (req,res)=>{
         if(err) return res.json(err)
         return res.json(data)
     })
+
+    /* script busca de livros
+    curl --location 'http://localhost:8800/books' \
+    --data ''
+    */
 })
 
 // Inserir novo livro
@@ -42,11 +47,6 @@ app.post("/books", (req,res)=>{
         if(err) return res.json(err)
         return res.json("Livro criado com succeso!")
     })
-
-    /* buscar livros
-    curl --location 'http://localhost:8800/books' \
-    --data ''
-    */
 })
 
 // Deletar livro
@@ -57,6 +57,23 @@ app.delete("/books/id/:id", (req, res) => {
     db.query(q, [bookId], (err, data) => {
         if(err) return res.json(err)
         return res.json("Livro deletado com succeso!")
+    })
+})
+
+// Editar livro
+app.put("/books/id/:id", (req,res) => {
+    const bookId = req.params.id
+    const q = "UPDATE books SET `title` = ?, `desc` = ?, `price` = ?, `cover` = ? WHERE id = ?"
+    const values = [
+        req.body.title,
+        req.body.desc,
+        req.body.price,
+        req.body.cover
+    ]
+
+    db.query(q, [...values,bookId], (err, data) => {
+        if(err) return res.json(err)
+        return res.json("Livro editado com succeso!")
     })
 })
 
