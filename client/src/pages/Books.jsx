@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { useState } from "react"
 import axios from "axios"
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom"
 
 const Books = () => {
     const [books,setBooks] = useState([])
@@ -31,25 +31,36 @@ const Books = () => {
         }
     }
 
+    const navigate = useNavigate()
+    const handleClick = (e) => {
+        try {
+            navigate("./add")
+        } catch(err) {
+            console.log(err)
+        }
+    }
+
     return (
-        <div>
-            <h1>Livraria</h1>
-            <div className="books">
-                {books.map((book, index) => (
-                    <div className="book" key={book.id || index}>
-                        {book.COVER && <img src={book.COVER} alt=""/>}
-                        <h2>{book.TITLE}</h2>
-                        <p>{book.DESC}</p>
-                        <span>{book.PRICE}</span>
-                        <button className="delete" onClick={()=>handleDelete(book.ID)}>Deletar</button>
-                        <button className="update"><Link className="updateLink" to={`./Update/${book.ID}`}>Alterar</Link></button>
-                    </div>
-                ))}
+        <main className="main">
+            <h1>Livraria do Kauê</h1>
+            <div>
+                <div className="books">
+                    {books.map((book, index) => (
+                        <div className="book" key={book.id || index}>
+                            {book.COVER && <img src={book.COVER} alt=""/>}
+                            <h2>{book.TITLE}</h2>
+                            <p>{book.DESC}</p>
+                            <span>R$ {book.PRICE}</span>
+                            <div className="buttons">
+                                <button className="delete" onClick={()=>handleDelete(book.ID)}>Deletar</button>
+                                <button className="update"><Link className="updateLink" to={`./Update/${book.ID}`}>Alterar</Link></button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <button>
-                <Link to="./add">Add new book</Link>
-            </button>
-        </div>
+            <button className="formButton" onClick={handleClick}>Adicionar novo livro</button>
+        </main>      
     )
 }
 
