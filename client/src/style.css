@@ -34,11 +34,36 @@ img {
     border: 1px solid rgb(245, 191, 191);
     color: rgb(242, 100, 100);
 }
+
 .update {
-    border: none;
     padding: 3px 6px;
     background-color: white;
     cursor: pointer;
     border: 1px solid rgb(204, 204, 243);
+}
+
+.updateLink {
+    text-decoration: none;
     color: rgb(139, 139, 234);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.formButton {
+    border: none;
+    padding: 10px;
+    background-color: rgb(244, 142, 74);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }

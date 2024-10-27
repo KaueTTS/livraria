@@ -41,13 +41,13 @@ const Books = () => {
                         <h2>{book.TITLE}</h2>
                         <p>{book.DESC}</p>
                         <span>{book.PRICE}</span>
-                        <button className="delete" onClick={()=>handleDelete(book.ID)}>Delete</button>
-                        <button className="update">Update</button>
+                        <button className="delete" onClick={()=>handleDelete(book.ID)}>Deletar</button>
+                        <button className="update"><Link className="updateLink" to={`./Update/${book.ID}`}>Alterar</Link></button>
                     </div>
                 ))}
             </div>
             <button>
-                <Link to="/add">Add new book</Link>
+                <Link to="./add">Add new book</Link>
             </button>
         </div>
     )
