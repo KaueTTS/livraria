@@ -42,6 +42,12 @@ Essas operações juntas permitem que o sistema de livros funcione como uma inte
 
 ## Projeto em funcionamento
 
+Clique na imagem abaixo para assistir ao tutorial em vídeo!
+
+[![Assista ao tutorial](image.png "Como utilizar o sistema CRUD desse projeto")](link-do-video)
+
+**Descrição**: Este vídeo cobre todo o processo para visualizar o CRUD em funcionamento, do início ao fim.
+
 ## Como utilizar o projeto
 
 ```
