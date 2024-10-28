@@ -1,8 +1,10 @@
-<h1 align="center">CRUD - Livraria</h1>
+<h1 align="center">Livraria</h1>
 
 <p align="center">
-<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20ANDAMENTO&color=0065fd&style=for-the-badge"/>
+<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/>
 </p>
+
+> 🔔 ***Nota:** Esse projeto pode ter alterações no futuro.*
 
 ### Tópicos
 
@@ -44,7 +46,7 @@ Essas operações juntas permitem que o sistema de livros funcione como uma inte
 
 Clique na imagem abaixo para assistir ao tutorial em vídeo!
 
-[![Assista ao tutorial](imagem.png "Como utilizar o sistema CRUD desse projeto")](link-do-video)
+[![Assista ao tutorial](image.png "Como utilizar o sistema CRUD desse projeto")](https://drive.google.com/file/d/1ZP6Ljb-e8i-wyecIi_cl3iZfZMyVBLqw/view?usp=sharing)
 
 **Descrição**: Este vídeo cobre todo o processo para visualizar o CRUD em funcionamento, do início ao fim.
 
@@ -54,6 +56,8 @@ Clique na imagem abaixo para assistir ao tutorial em vídeo!
 < INSTALADORES >
 
 npm i express mysql nodemon
+npm un mysql
+npm in mysql2
 npx create-react-app .
 npm i react-router-dom
 npm i axios
@@ -70,6 +74,14 @@ npm start
 cd ./client
 npm start
 ```
+
+> **1**: Abra o projeto no VsCode e o `test_books.sql` no MySql.<br>
+> **2**: (cd ./backend) Instale o `npm i express mysql nodemon` no terminal da IDE.<br>
+> **3**: (cd ./backend) Desinstale a dependência na IDE com `npm un mysql` e reinstale com `npm in mysql2`.<br>
+> **4**: (cd ./client) Instale as dependências `npx create-react-app .`, `npm i react-router-dom` e `npm i axios` no terminal da IDE.<br>
+> **5**: (cd ./client) Instale o `npm i cors` no terminal da IDE.<br>
+> **6**: (cd ./backend) Rode o `npm start` para iniciar o servidor.<br>
+> **7**: (cd ./client) Rode o `npm start` para iniciar o cliente.<br>
 
 ## Colaboradores
 
