@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 const Update = () => {
     const [book, setBook] = useState({
         title:"",
+        author:"",
         desc:"",
         price:null,
         cover:"",
@@ -35,6 +36,7 @@ const Update = () => {
         <div className="form">
             <h1>Alterar o livro</h1>
             <input type="text" placeholder="Título" onChange={handleChange} name="title"/>
+            <input type="text" placeholder="Autor" onChange={handleChange} name="author"/>
             <input type="text" placeholder="Descrição" onChange={handleChange} name="desc"/>
             <input type="number" placeholder="Preço" onChange={handleChange} name="price"/>
             <input type="text" placeholder="Imagem" onChange={handleChange} name="cover"/>
