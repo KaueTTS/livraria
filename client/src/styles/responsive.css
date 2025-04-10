@@ -1,0 +1,110 @@
+/* Telas pequenas */
+@media (max-width: 1380px) {
+    .books-wrapper {
+        padding: 0.8rem;
+    }
+
+    .books-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .add-btn {
+        font-size: 0.7rem;
+    }
+
+    .books-carousel {
+        margin: 0 1rem;
+    }
+
+    .book-card {
+        min-width: 10rem; /* Garante uma largura mínima */
+        max-width: 10rem; /* (opcional) */
+        margin: 0.8rem 0.6rem;
+    }
+
+    .book-cover {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 0.6rem;
+    }
+
+    .book-description {
+        max-height: 42px;
+        font-size: 0.6rem;
+        padding: 0.4rem;
+    }
+
+    .book-info h2 {
+        font-size: 0.9rem;
+    }
+
+    .book-info p {
+        font-size: 0.65rem;
+    }
+
+    .card-buttons {
+        margin-top: 0.8rem;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        margin: 0 3px;
+        padding: 0.3rem;
+        font-size: 0.7rem;
+    }
+  
+    .footer {
+        padding: 0.8rem;
+        font-size: 0.6rem;
+        width: 100%;
+    }
+}
+
+/* Tablets */
+@media (max-width: 980px) {
+    /* Ajusta o layout do cabeçalho */
+    .books-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    /* Ajusta o tamanho dos cards de livros */
+    .book-card {
+      width: 80%;
+      margin: 0 auto 1rem;
+    }
+  
+    /* Ajusta o botão de adicionar livro */
+    .add-btn {
+      width: 100%;
+      padding: 0.8rem;
+    }
+}
+
+/* Telefone */
+@media (max-width: 480px) {
+    /* Ajusta o tamanho da fonte do cabeçalho */
+    .books-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    /* Ajusta o tamanho dos cards de livros */
+    .book-card {
+      width: 100%;
+      margin: 0 auto 1rem;
+    }
+  
+    /* Ajusta o botão de adicionar livro */
+    .add-btn {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  
+    /* Ajusta o rodapé */
+    .footer {
+      padding: 1rem;
+      font-size: 0.8rem;
+    }
+}
