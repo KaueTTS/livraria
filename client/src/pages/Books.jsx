@@ -50,9 +50,18 @@ const Books = () => {
                 {books.map((book, index) => (
                     <div className="book-card" key={book.id || index}>
                         <div className="book-info">    
+                            {book.COVER && (
+                                <img
+                                    src={book.COVER}
+                                    alt={`Capa de ${book.TITLE}`}
+                                    className="book-cover"
+                                />
+                            )}
                             <h2>{book.TITLE}</h2>
                             <p><strong>Autor:</strong> {book.AUTHOR}</p>
-                            <p>{book.DESC}</p>
+                            <div className="book-description">
+                                {book.DESC}
+                            </div>
                             <p><strong>Preço:</strong> R${book.PRICE.toFixed(2)}</p>
                         </div>
                         <div className="card-buttons">
@@ -62,29 +71,7 @@ const Books = () => {
                     </div>
                 ))}
             </div>
-        </div>
-
-
-        // <main className="main">
-        //     <h1>Livraria do Kauê</h1>
-        //     <div>
-        //         <div className="books">
-        //             {books.map((book, index) => (
-        //                 <div className="book" key={book.id || index}>
-        //                     {book.COVER && <img src={book.COVER} alt=""/>}
-        //                     <h2>{book.TITLE}</h2>
-        //                     <p>{book.DESC}</p>
-        //                     <span>R$ {book.PRICE}</span>
-        //                     <div className="buttons">
-        //                         <button className="delete" onClick={()=>handleDelete(book.ID)}>Deletar</button>
-        //                         <button className="update"><Link className="updateLink" to={`./Update/${book.ID}`}>Alterar</Link></button>
-        //                     </div>
-        //                 </div>
-        //             ))}
-        //         </div>
-        //     </div>
-        //     <button className="formButton" onClick={handleClick}>Adicionar novo livro</button>
-        // </main>      
+        </div>    
     )
 }
 
