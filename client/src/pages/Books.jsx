@@ -68,8 +68,8 @@ const Books = () => {
                                 <p><strong>Preço:</strong> R${book.PRICE.toFixed(2)}</p>
                             </div>
                             <div className="card-buttons">
-                            <button className="delete-btn" onClick={()=>handleDelete(book.ID)}>Deletar</button>
-                            <button className="edit-btn"><Link className="updateLink" to={`./update/${book.ID}`}>Editar</Link></button>
+                                <button className="delete-btn" onClick={()=>handleDelete(book.ID)}>Deletar</button>
+                                <button className="edit-btn"><Link className="updateLink" to={`./update/${book.ID}`}>Editar</Link></button>
                             </div>
                         </div>
                     ))}
