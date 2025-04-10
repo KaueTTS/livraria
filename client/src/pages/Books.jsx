@@ -60,7 +60,7 @@ const Books = () => {
                             <h2>{book.TITLE}</h2>
                             <p><strong>Autor:</strong> {book.AUTHOR}</p>
                             <div className="book-description">
-                                {book.DESC}
+                            {book.DESC}
                             </div>
                             <p><strong>Preço:</strong> R${book.PRICE.toFixed(2)}</p>
                         </div>

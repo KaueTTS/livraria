@@ -36,17 +36,12 @@
   
   .books-carousel {
     display: flex;
-    justify-content: center;
-    align-items: center;
     overflow-x: auto;
-    gap: 1rem;
-    padding-bottom: 1rem;
+    margin: 0 2rem;
     scroll-behavior: smooth;
-  
-    max-width: 1200px;
-    margin: 0 auto;
+    scroll-snap-type: x mandatory;
   }
-  
+
   .books-carousel::-webkit-scrollbar {
     height: 8px;
   }
@@ -55,16 +50,21 @@
     background-color: #ccc;
     border-radius: 4px;
   }
-  
+
   .book-card {
-    flex: 0 0 auto;
-    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex: 0 0 auto; /* Impede encolhimento automático */
+    min-width: 200px; /* Garante uma largura mínima */
+    max-width: 200px; /* (opcional) */
+    padding: 0.5rem;
+    margin: 0 1rem 1rem;
     background: #fff;
-    padding: 1rem;
-    margin-right: 1rem;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
     transition: transform 0.2s ease-in-out;
   }
   
@@ -91,7 +91,7 @@
     border: 1px solid #eee;
     border-radius: 4px;
     background-color: #f9f9f9;
-    margin-bottom: 1rem;
+    margin: 0.4rem 0;
   }
   
   /* Scrollbar mais discreta */
@@ -112,7 +112,6 @@
   .book-info p {
     font-size: 0.9rem;
     color: #555;
-    margin: 0.2rem 0;
   }
   
   .card-buttons {

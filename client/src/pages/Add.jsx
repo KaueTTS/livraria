@@ -41,6 +41,7 @@ const Add = () => {
                 <input type="text" placeholder="URL da capa" onChange={handleChange} name="cover"/>
 
                 <button className="formButton" onClick={handleClick}>Adicionar</button>
+                {/* <button className="back-btn" onClick={handleClick}>Voltar</button> */}
             </form>
         </div>
     )
