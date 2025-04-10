@@ -23,7 +23,7 @@ const Books = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete("http://localhost:8800/books/id/"+id)
+            await axios.delete(`http://localhost:8800/books/id/${id}`)
             window.location.reload()
         } catch(err) {
             console.log(err)
@@ -31,7 +31,7 @@ const Books = () => {
     }
 
     const navigate = useNavigate()
-    const handleClick = (e) => {
+    const handleAddBook = (e) => {
         try {
             navigate("./add")
         } catch(err) {
@@ -40,37 +40,45 @@ const Books = () => {
     }
 
     return (
-        <div className="book-wrapper">
+        <div className="books-wrapper">
             <div className="books-header">
-                <h1>📚 Catálogo de Livros</h1>
-                <button className="add-btn" onClick={handleClick}>Adicionar Livro</button>
+                <div>                    
+                    <h1>📚 Catálogo de Livros Administrativo</h1>
+                    <button className="add-btn" onClick={handleAddBook}>Adicionar Livro</button>
+                </div>
             </div>
 
-            <div className="books-carousel">
-                {books.map((book, index) => (
-                    <div className="book-card" key={book.id || index}>
-                        <div className="book-info">    
-                            {book.COVER && (
-                                <img
-                                    src={book.COVER}
-                                    alt={`Capa de ${book.TITLE}`}
-                                    className="book-cover"
-                                />
-                            )}
-                            <h2>{book.TITLE}</h2>
-                            <p><strong>Autor:</strong> {book.AUTHOR}</p>
-                            <div className="book-description">
-                            {book.DESC}
+            <div className="books">
+                <div className="books-carousel">
+                    {books.map((book, index) => (
+                        <div className="book-card" key={book.id || index}>
+                            <div className="book-info">    
+                                {book.COVER && (
+                                    <img
+                                        src={book.COVER}
+                                        alt={`Capa de ${book.TITLE}`}
+                                        className="book-cover"
+                                    />
+                                )}
+                                <h2>{book.TITLE}</h2>
+                                <p><strong>Autor:</strong> {book.AUTHOR}</p>
+                                <div className="book-description">
+                                {book.DESC}
+                                </div>
+                                <p><strong>Preço:</strong> R${book.PRICE.toFixed(2)}</p>
                             </div>
-                            <p><strong>Preço:</strong> R${book.PRICE.toFixed(2)}</p>
+                            <div className="card-buttons">
+                            <button className="delete-btn" onClick={()=>handleDelete(book.ID)}>Deletar</button>
+                            <button className="edit-btn"><Link className="updateLink" to={`./update/${book.ID}`}>Editar</Link></button>
+                            </div>
                         </div>
-                        <div className="card-buttons">
-                        <button className="delete-btn" onClick={()=>handleDelete(book.ID)}>Deletar</button>
-                        <button className="edit-btn"><Link className="updateLink" to={`./Update/${book.ID}`}>Editar</Link></button>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
+
+            <footer className="footer">
+                <p>📚 Livraria do KauêTTS © {new Date().getFullYear()} - Todos os direitos reservados</p>
+            </footer>
         </div>    
     )
 }
