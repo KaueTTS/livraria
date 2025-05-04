@@ -76,7 +76,7 @@ cd ./client
 npm start
 ```
 
-> **1**: Abra o projeto no VsCode e o `test_books.sql` no MySql.<br>
+> **1**: Abra o projeto no VsCode e o `books.sql` no MySql.<br>
 > **2**: (cd ./backend) Instale o `npm i express mysql nodemon` no terminal da IDE.<br>
 > **3**: (cd ./backend) Desinstale a dependência na IDE com `npm un mysql` e reinstale com `npm in mysql2`.<br>
 > **4**: (cd ./client) Instale as dependências `npx create-react-app .`, `npm i react-router-dom` e `npm i axios` no terminal da IDE.<br>
