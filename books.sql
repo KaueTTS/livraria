@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
 --
--- Host: localhost    Database: test
+-- Host: localhost    Database: livraria
 -- ------------------------------------------------------
 -- Server version	8.0.40
 
@@ -22,11 +22,15 @@
 DROP TABLE IF EXISTS `books`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
+CREATE DATABASE livraria;
+USE livraria;
+
 CREATE TABLE `books` (
   `ID` int NOT NULL AUTO_INCREMENT,
+  `AUTHOR` varchar(30) NOT NULL,
   `TITLE` varchar(30) NOT NULL,
-  `DESC` varchar(155) NOT NULL,
-  `COVER` varchar(45) DEFAULT NULL,
+  `DESC` varchar(255) NOT NULL,
+  `COVER` varchar(255) DEFAULT NULL,
   `PRICE` int NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -38,7 +42,7 @@ CREATE TABLE `books` (
 
 LOCK TABLES `books` WRITE;
 /*!40000 ALTER TABLE `books` DISABLE KEYS */;
-INSERT INTO `books` VALUES (1,'KauêTTS','https://github.com/KaueTTS','JK.png',999);
+INSERT INTO `books` VALUES (1,'KauêTTS', 'Livraria','https://github.com/KaueTTS','JK.png',999);
 /*!40000 ALTER TABLE `books` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
